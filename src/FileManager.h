@@ -7,7 +7,8 @@
 
 class FileManager {
 public:
-    FileManager();
+    // FileManager();
+    FileManager(const String path);
     
     // File Operations
     String readFile(const String path, char point);
@@ -28,6 +29,7 @@ public:
     bool isValidString(const String &input);
 
 private:
+    String FILE_CONF = "";
     void listFiles();
     void sortFiles();
     void displayFiles();
