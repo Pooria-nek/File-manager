@@ -1,9 +1,11 @@
 #include "FileManager.h"
 
-FileManager::FileManager() {
+FileManager::FileManager(const String path) {
     if (!SPIFFS.begin(true)) {
         Serial.println("SPIFFS Mount Failed");
     }
+
+    FILE_CONF = path;
 }
 
 // Read file with point delimiter
